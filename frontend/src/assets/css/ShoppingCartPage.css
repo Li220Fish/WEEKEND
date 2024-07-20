@@ -1,0 +1,162 @@
+.cart-back-button {
+    margin: 16px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.cart-title {
+    margin-bottom: 16px;
+}
+
+.cart-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.cart-left-flex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cart-right-flex {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 16px;
+}
+
+.cart-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Ensure absolute positioning works for remove button */
+}
+
+.cart-cocktail-image-container {
+    width: 100px; /* Make the container square */
+    height: 100px; /* Make the container square */
+    background-color: gray; /* Gray background if no image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.cart-cocktail-image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cart-cocktail-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    flex-grow: 1;
+}
+
+.cart-remove-button {
+    right: 10px;
+    top: 10px;
+    background-color: red;
+    color: rgb(255, 0, 0);
+    border-radius: 50%;
+    padding: 5px; /* Adjust padding to control the size */
+}
+
+.cart-remove-button:hover {
+    background-color: darkred;
+}
+
+.cart-summary-card {
+    width: 100%;
+}
+
+.cart-empty-message {
+    text-align: center;
+    margin-top: 16px;
+}
+.Ingredient-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .cart-back-button {
+        margin: 8px;
+        font-size: 12px; /* Smaller font size for the back button */
+    }
+
+    .cart-container {
+        padding: 8px;
+    }
+
+    .cart-title {
+        margin-bottom: 8px;
+        font-size: 20px; /* Smaller font size for the title */
+    }
+
+    .cart-content {
+        flex-direction: column; /* Stack items vertically */
+        padding: 0 8px;
+    }
+
+    .cart-left-flex,
+    .cart-right-flex {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .cart-card-content {
+        display: flex;/* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .cart-cocktail-image-container {
+        width: 60px; /* Smaller image container */
+        height: 60px; /* Smaller image container */
+    }
+
+    .cart-cocktail-details {
+        margin-left: 8px;
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .cart-remove-button {
+        right: 5px;
+        top: 5px;
+        padding: 3px; /* Smaller remove button */
+    }
+
+    .cart-summary-card {
+        margin-top: 16px;
+    }
+
+    .cart-empty-message {
+        font-size: 16px; /* Smaller font size for empty message */
+    }
+
+    .Ingredient-box {
+        padding: 4px;
+        font-size: 12px; /* Smaller font size */
+    }
+}

@@ -1,0 +1,212 @@
+body {
+  background-color: #ebebeb97; /* Light grey background for the entire page */
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333;
+  padding: 0px;
+  display: flex;
+  z-index: 1000; /* Ensures header is above other elements */
+  justify-content: space-between; /* Change to space-between to align items to the edges */
+  align-items: center; /* Center align items vertically */
+  z-index: 1000; /* Ensures header is above other elements */
+}
+
+.header a {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.new_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto 0 auto; /* Use margin auto to center the container */
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px; /* Added padding for inner spacing */
+  width: 90%; /* Adjust the width to make the container bigger */
+  max-width: 1200px; /* Add a max-width for better control on larger screens */
+}
+
+.back-button {
+  position: fixed;
+  top: 70px; /* Positioning the button 70px from the top */
+  left: 20px; /* Positioning the button 20px from the left */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: none; /* Keeps text as is */
+  font-size: 16px; /* Slightly larger text */
+  z-index: 999; /* Ensure it appears above other elements */
+}
+
+.back-button:hover {
+  background-color: #333; /* Darker hover effect */
+}
+
+.new_flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.new_left-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-placeholder {
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #999;
+}
+
+/* NEW */
+.image-placeholder img {
+  width: 100%; /* Make image fill container horizontally */
+  height: 100%; /* Make image fill container vertically */
+  border-radius: 10px;
+}
+
+.new_right-section {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 0 20px;
+}
+
+.ingredient-section {
+  width: 75%;
+}
+
+.right-section > *:not(:first-child):not(:nth-child(2)) {
+  margin-top: 20px; /* Adds space after the first and second child */
+}
+
+.like-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  margin-right: 20px;
+}
+
+.comments-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.comment-box {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .back-button {
+    top: 20px;
+  }
+  .new_flex-container {
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new_left-section, .new_right-section, .ingredient-section {
+    width: 100%;
+    padding: 0;
+  }
+
+  .new_right-section {
+    padding: 20px 0;
+  }
+
+  .ingredient-section {
+    padding: 20px 0;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .header a {
+    font-size: 20px;
+  }
+
+  .image-placeholder {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .new_flex-container {
+    flex-direction: row;
+  }
+
+  .new_left-section, .new_right-section, .ingredient-section {
+    width: 50%;
+  }
+
+  .ingredient-section {
+    width: 75%;
+  }
+
+  .back-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .header a {
+    font-size: 25px;
+  }
+
+  .image-placeholder {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.upper-button{
+  justify-content: space-between; /* Change to space-between to align items to the edges */
+  z-index: 1000; /* Ensures header is above other elements */
+  display: flex;
+  position: relative;
+}
+
+.list-button {
+  align-self: flex-end;
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  left: 90%;
+  margin-right: 10px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}

@@ -1,0 +1,234 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.list-header{
+  background-color: #AF8260;
+}
+.cocktail_mode{
+  margin-top: 0;
+}
+.cocktail-table-container{
+  margin-top: 0;
+}
+
+/* Default styles for desktop view */
+.filter-options {
+  display: block;
+}
+
+/* Styles for mobile view */
+@media (max-width: 600px) {
+  .filter-options {
+      display: none; /* Hide filters by default */
+  }
+
+  .filter-options.expanded {
+      display: block; /* Show filters when expanded */
+  }
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+  box-sizing: border-box; /* 确保 padding 不会导致宽度超出 100% */
+}
+
+.header a {
+  color: #f50e0e;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Flex container for sidebar and content */
+.cocktail-table-container {
+  background-color: #e4d5ca;
+  display: flex;
+  flex-wrap: wrap; /* 确保内容在小屏幕上能换行 */
+  min-height: 100vh; 
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 220px;
+  background-color: #AF8260;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box; /* 确保 padding 不会导致宽度超出 220px */
+  z-index: 999;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* In App.css */
+.MuiCheckbox-root .MuiSvgIcon-root {
+  color: white; /* Unchecked color */
+}
+
+.MuiCheckbox-root.Mui-checked .MuiSvgIcon-root {
+  color: white; /* Checked color */
+}
+
+
+
+.sidebar .MuiFormControlLabel-root {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sidebar .MuiTypography-root {
+  margin-top: 10px;
+}
+
+.sidebar .MuiFormGroup-root {
+  margin-bottom: 20px;
+}
+
+.sidebar .filter-section {
+  font-size: 25px;
+  color: white;
+}
+
+.sidebar .alcohol-section,
+.sidebar .taste-section,
+.sidebar .liquor-section,
+.sidebar .hot-cold-section {
+  font-size: 18px;
+  text-decoration: underline;
+  color: white;
+}
+
+.MuiFormControlLabel-label {
+  color: white;
+}
+
+/* Content area */
+.new_content {
+  flex: 1; /* 占用剩余空间 */
+  padding: 15px;
+  min-height: calc(100vh ); /* 确保最小高度为视口高度减去 header 的高度 */
+  margin-left: 130px; /* 与 sidebar 一致 */
+  box-sizing: border-box; /* 确保 padding 不会导致溢出 */
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex: 0 0 100%;
+    margin-left: 0;
+  }
+
+  .new_content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .cocktail-table-container {
+    flex-direction: column;
+  }
+  .card-content {
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Card */
+.card-content {
+  width: 250px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E4C59E;
+  border-radius: 10px;
+  padding-bottom: 0px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cocktail-image-wrapper {
+  width: 230px;
+  height: 230px;
+  background-color: #e0e0e0;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 确保图片不溢出容器 */
+  border-radius: 10px; /* 可选：为图片添加圆角，与卡片一致 */
+}
+
+.cocktail-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* 保持图片的宽高比，并裁剪填充容器 */
+}
+
+.cocktail-name-wrapper{
+  width: 230px;
+  height: 75px;
+  background-color: #fff7f0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  border-radius: 10px; /* 可选：为图片添加圆角，与卡片一致 */
+  margin-bottom: 0;
+}
+
+.cocktail-name,
+.cocktail-english-name {
+  color: #01204E;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center; /* Centers pagination */
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+  background-color: #c9c8c8;
+}
+.page-info {
+  margin: 0 10px;
+  font-size: 1em;
+}
+
+/* Define custom styles for TextField */
+.textfield .MuiOutlinedInput-root {
+  color: white; /* Text color */
+  border-color: white; /* Border color */
+
+  /* Change border color on focus */
+  &:hover .MuiOutlinedInput-notchedOutline {
+    border-color: white;
+  }
+
+  &.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: white;
+  }
+}
+
+.textfield .MuiInputLabel-root {
+  color: white; /* Label color */
+
+  /* Change label color on focus */
+  &.Mui-focused {
+    color: white;
+  }
+}
